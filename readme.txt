@@ -1,6 +1,6 @@
 1) Palaist blokíçdes emulatoru.
 2) Iesâknçt terminâli projekta saknes direktorijâ.
-3) Ievadît komandu 'truffle migrate'.
+3) Ievadît komandu 'truffle migrate --reset'.
 4) Ievadît komandu 'cd majslapa'.
 5) Atvçrt failu 'index.js'.
 6) Nomainît mainîgo 'blockchain_emulator' uz bloíçdes emulatora adresi.

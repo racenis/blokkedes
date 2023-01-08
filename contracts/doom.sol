@@ -38,7 +38,7 @@ contract Doom {
     address oracle;
     uint[INPUT_COUNT] votes;
     Input[] inputs;
-    uint level = 0;
+    uint level = 1;
 
     constructor () {
         oracle = msg.sender;

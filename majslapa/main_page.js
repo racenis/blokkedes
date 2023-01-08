@@ -1,6 +1,6 @@
 const web3 = new Web3(window.ethereum);
 
-const doom_contract_address = "0x827dBE49971135303A01e99AC3e34Bda65F083fD";
+const doom_contract_address = "0x13B7BA473f6C361f805491BE4814433259e8d2b2";
 
 var doom_contract;
 var user_account;
