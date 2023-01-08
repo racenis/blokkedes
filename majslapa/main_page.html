@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>DOOM -- BLOKĶĒDE</title>
+		<script src="web3.js"></script> 
+		<script src="main_page.js"></script> 
+	</head>
+	<body background="background.gif">
+		<table width="600" align="center" border="8" background="background2.gif">
+			<tr>
+				<td>
+					<center>
+						<h1>DOOM</h1>
+						
+						<h3>uz blokķēdes</h3>
+						<hr/>
+					</center>
+					<p>
+						&nbsp;<b>DOOM uz bloķēdes</b> ir iespēja spēlēt 
+						<a target="blank" href="https://lv.wikipedia.org/wiki/Doom_(datorsp%C4%93le)">populāro kompjūterspēli
+						&laquo;DOOM&raquo;</a> uz blokķēdes.<br/>&nbsp;Piedalīšanās maksa ir bezmaksas, bet jums ir jāapmaksā viedā līguma darbināšanas cena.
+					</p>
+					<p>
+						&nbsp;<b>Noteikumi:</b>
+						<ol>
+							<li>Visi balso par tastatūras ievadu</li>
+							<li>Populārākais ievads tiek ievadīts spēlē</li>
+							<li>Atkārto līdz spēle beidzās</li>
+							<li>Uzvar tas kurš nepiedalās</li>
+						</ol>
+					</p>
+					<table width ="400" align="center" border="1" bgcolor="#f8f2e7">
+						<tr>
+							<td colspan="3">
+								<center>
+									<h2>
+										<a target="blank" href="results.lmp">IEGŪT REZULTĀTUS</a>
+									</h2>
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<center>
+									<h3>
+										Balsošana
+									</h3>
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								&nbsp;<b>Ievads</b>
+							</td>
+							<td>
+								&nbsp;<b>Balsot</b>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								&nbsp;Neko nedarīt
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(0)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								&nbsp;Šaut
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(7)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								&nbsp;Aktivizēt
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(8)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="4">
+								&nbsp;Iet
+							</td>
+							<td>
+								&nbsp;Uz priekšu
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(1)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Uz atpakaļu
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(2)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Pa Labi
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(4)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Pa Kreisi
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(3)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="2">
+								&nbsp;Griezties
+							</td>
+							<td>
+								&nbsp;Pa labi
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(6)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Pa Kreisi
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(5)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="8">
+								&nbsp;Mainīt<br/>&nbsp;šaujamo
+							</td>
+							<td>
+								&nbsp;Dūre
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(9)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Motorzāģis
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(10)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Pistole
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(11)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Bise
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(12)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Ložmetējs
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(13)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Raķešu šaujamais
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(14)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Plazmas šaujamais
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(15)">Balsot</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								&nbsp;Lielais šaujamais
+							</td>
+							<td>
+								&nbsp;<button onclick="vote_for_input(16)">Balsot</button>
+							</td>
+						</tr>
+					</table>
+					<br/><hr/>
+					<center>
+						<img src="button1.gif"/>
+						<img src="button2.gif"/>
+						<img src="button3.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

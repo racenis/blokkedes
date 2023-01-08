@@ -1,0 +1,18 @@
+{
+  "name": "majslapa",
+  "version": "1.0.0",
+  "description": "majslapaa",
+  "main": "index.js",
+  "dependencies": {
+    "web3": "^1.8.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "majslapa"
+  ],
+  "author": "es",
+  "license": "MIT"
+}
