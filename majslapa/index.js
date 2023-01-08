@@ -41,11 +41,9 @@ const server = http.createServer(async (req, res) => {
 	} else if (req.url == "/results.lmp") {
 		console.log("Prepering the lump...");
 		const response = await doom_contract.methods.GetInputs().call();
-		console.log(response);
 		res.statusCode = 200;
 		res.setHeader("Content-Type", "application/octet-stream");
-		const buffer = Buffer.from([0, 1, 2, 3, 4, 5, 69]);
-		res.write(buffer, 'binary');
+		res.write(Buffer.from(make_lump(response)), 'binary');
 		res.end(null, 'binary');
 	} else if (files.includes(req.url)) {
 		const req_image = fs.readFileSync(req.url.substring(1));
@@ -69,3 +67,45 @@ const server = http.createServer(async (req, res) => {
 server.listen(80, "127.0.0.1", () => {
   console.log("STARTĒTIES");
 });
+
+function make_lump (inputs) {
+	console.log("Got some inputs! Type: " + (typeof inputs[0]));
+	console.log(inputs);
+	
+	lump = [0x6D, 3, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+	
+	for (let i = 0; i < inputs.length; i++) {
+		let command;
+		let repeats;
+		
+		switch (inputs[i]) {
+			case '0':	command = [0, 0, 0, 0];		repeats = 16;	break;
+			case '1':	command = [25, 0, 0, 0];	repeats = 16;	break;
+			case '2':	command = [-25, 0, 0, 0];	repeats = 16;	break;
+			case '3':	command = [0, -25, 0, 0];	repeats = 16;	break;
+			case '4':	command = [0, 25, 0, 0];	repeats = 16;	break;
+			case '5':	command = [0, 0, 25, 0];	repeats = 1;	break;
+			case '6':	command = [0, 0, -25, 0];	repeats = 1;	break;
+			case '7':	command = [0, 0, 0, 1];		repeats = 1;	break;
+			case '8':	command = [0, 0, 0, 2];		repeats = 1;	break;
+			case '9':	command = [0, 0, 0, 0x04];	repeats = 1;	break;
+			case '10':	command = [0, 0, 0, 0x0C];	repeats = 1;	break;
+			case '11':	command = [0, 0, 0, 0x14];	repeats = 1;	break;
+			case '12':	command = [0, 0, 0, 0x1C];	repeats = 1;	break;
+			case '13':	command = [0, 0, 0, 0x24];	repeats = 1;	break;
+			case '14':	command = [0, 0, 0, 0x2C];	repeats = 1;	break;
+			case '15':	command = [0, 0, 0, 0x34];	repeats = 1;	break;
+			case '16':	command = [0, 0, 0, 0x3C];	repeats = 1;	break;
+		}
+		
+		for (let i = 0 ; i < repeats; i++) {
+			lump = lump.concat(command);
+		}
+	}
+	
+	for (let i = 0 ; i < 256; i++) {
+		lump = lump.concat([0, 0, 0, 0]);
+	}
+	
+	return lump;
+}
