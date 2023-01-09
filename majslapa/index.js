@@ -3,7 +3,7 @@ const fs = require('fs');
 const Web3 = require("web3");
 
 const blokchain_emulator = "http://localhost:7545";
-const doom_contract_address = "0x13B7BA473f6C361f805491BE4814433259e8d2b2";
+const doom_contract_address = "0x02346518Ec85A950bf2bf6fdeAF12581c6f7Df56";
 
 const web3 = new Web3(blokchain_emulator);
 
@@ -70,10 +70,6 @@ server.listen(80, "127.0.0.1", () => {
 });
 
 function make_lump (inputs, level) {
-	console.log("Got some inputs! Type: " + (typeof inputs[0]));
-	console.log(inputs);
-	console.log(level);
-	
 	lump = [0x6D, 2, 1, level, 0, 0, 0, 0, 0, 1, 0, 0, 0]
 	
 	for (let i = 0; i < inputs.length; i++) {
